@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\PostLivewire;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+//Route::get('noticias',PostLivewire::class)->name('noticias');
