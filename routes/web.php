@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\IndexLivewire;
 use App\Livewire\PostLivewire;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::middleware([
     'auth:sanctum',
@@ -28,4 +29,5 @@ Route::middleware([
     })->name('dashboard');
 });
 
-//Route::get('noticias',PostLivewire::class)->name('noticias');
+Route::get('/',[IndexLivewire::class,'render'])->name('index');
+Route::get('noticias',[PostLivewire::class,'render'])->name('noticias');
