@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Category;
+use App\Models\Squad;
 use App\Models\Tag;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
@@ -27,5 +28,8 @@ class DatabaseSeeder extends Seeder
         Category::factory(4)->create();
         Tag::factory(8)->create();
         $this->call(PostSeeder::class);
+
+        $this->call(PostionSeeder::class);
+        Squad::factory(50)->create();
     }
 }
