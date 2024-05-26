@@ -13,7 +13,7 @@ class PostSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void {
-        $posts=Post::factory(50)->create();
+        $posts=Post::factory(5)->create();
         foreach($posts as $post){
             Image::factory(1)->create([
                 'imageable_id'=>$post->id,

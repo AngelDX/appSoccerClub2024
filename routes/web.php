@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\IndexLivewire;
+use App\Livewire\ManagerMain;
 use App\Livewire\PostLivewire;
 use App\Livewire\SquadLivewire;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/administradores',ManagerMain::class)->name('administradores');
 });
 
 Route::get('/',[IndexLivewire::class,'render'])->name('index');

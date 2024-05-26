@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Category;
+use App\Models\Manager;
 use App\Models\Squad;
 use App\Models\Tag;
 use Illuminate\Database\Seeder;
@@ -31,5 +32,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call(PostionSeeder::class);
         Squad::factory(50)->create();
+
+        $this->call(SeasonSeeder::class);
+        Manager::factory(30)->create();
     }
 }

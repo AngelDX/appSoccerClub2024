@@ -36,7 +36,7 @@ class Handler extends ExceptionHandler
             //
         });
     }
-
+    /*
     public function render($request, Throwable $exception)
     {
         if($exception instanceof HttpException){
@@ -71,6 +71,6 @@ class Handler extends ExceptionHandler
         }
         return $this->errorResponse('Error inesperado. Intenta mas tarde',Response::HTTP_INTERNAL_SERVER_ERROR);
 
-    }
+    }*/
 
 }
