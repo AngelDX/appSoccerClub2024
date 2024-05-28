@@ -3,6 +3,8 @@
 use App\Livewire\IndexLivewire;
 use App\Livewire\PostLivewire;
 use App\Livewire\SquadLivewire;
+use App\Livewire\SquadMain;
+use App\Models\Squad;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +30,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/equipo',SquadMain::class)->name('equipo');
+    Route::get('/squadpdf',[SquadMain::class,'GenerarPDF'])->name('squadpdf');
 });
 
 Route::get('/',[IndexLivewire::class,'render'])->name('index');
